@@ -1,0 +1,815 @@
+
+  .container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Resetting default styles  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #2eaa0e;
+    color: #2eaa0e;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.h1 {
+    text-align: left;
+    color: #030000;
+}
+
+/* Navbar styles */
+/* Navbar Styling */
+/* Writing Animation */
+.writing-animation {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black; /* Black text as requested */
+    border-right: 2px solid black; /* Cursor effect */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Ensures text doesn't appear until typed */
+    width: 0; /* Start with 0 width */
+    animation: typing 4s steps(40, end) forwards, blink-caret 0.5s step-end infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 76%; /* Adjust based on text length */
+    }
+}
+
+/* Cursor Blink Effect */
+@keyframes blink-caret {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+/* Ensure the cursor disappears after typing ends */
+.writing-animation.stopped-cursor {
+    animation: none;
+    border-right: none;
+}
+
+.product-name {
+    font-size: 1.5rem; /* Slightly larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #d8d8d8; /* White text to match the navbar */
+    margin-right: auto; /* Pushes other elements to the right */
+    padding-left: 25px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1c0c0; /* Dark background for contrast */
+    padding: 20px 40px; /* Adjusted padding for navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01); /* Add shadow for a modern look */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Add spacing between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    padding: 10px 20px; /* Adjust padding inside each nav item */
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.navbar ul li:hover {
+    background-color: #555; /* Highlight on hover */
+    border-radius: 5px; /* Rounded corners */
+    color: #35ee2f; /* White text on hover */
+}
+
+.navbar {
+    background-color: #004403;
+    padding: 15px 0;
+    transition: padding 0.3s ease-in-out;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    color: #119e1d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    border-radius: 5px;
+    color: #ffcc00;
+}
+
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px 0;
+    min-width: 200px;
+    list-style: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.navbar .dropdown-content li a {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.navbar .dropdown-content li a:hover {
+    background-color: #666;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #2eaa0e;
+    color: white;
+    gap: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text {
+    flex: 1;
+    color: #000000;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #ff6f61;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffb3a1;
+    transform: scale(1.1);
+}
+
+.hero-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    animation: slideInRight 1s ease-out;
+}
+
+/* About Section Styles */
+.about {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    animation: fadeInUp 2s ease-out;
+}
+
+.about .content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #000000;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Features Section Styles */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 20px;
+    background-color: #2eaa0e;
+    animation: fadeIn 2s ease-out;
+}
+
+.feature-box {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 39, 15, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.feature-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Doc AI Section Styles */
+.doc-ai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #ececec;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.doc-ai-content {
+    flex: 1;
+}
+
+.doc-ai h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.doc-ai p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.doc-ai .cta-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.doc-ai .cta-button:hover {
+    background-color: #ffb3a1;
+    transform: scale(1.1);
+}
+
+.doc-ai .doc-ai-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease-out;
+}
+
+/* App Launch Section */
+.app-launch-section {
+    background: linear-gradient(135deg, #04d420, #037e22);
+    padding: 80px 20px;
+    color: #000000;
+  }
+  
+  .app-launch-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .app-text {
+    flex: 1 1 45%;
+    margin-right: 20px;
+    text-align: left;
+  }
+  
+  .app-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .app-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000000;
+    margin: 15px 0;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #f75c35;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+  }
+  
+  .app-image {
+    flex: 1 1 50%;
+    text-align: center;
+  }
+  
+  .app-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 768px) {
+    .app-launch-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .app-text {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  
+.testimonials {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box p {
+    font-size: 1.2rem;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-box .user-name {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Mood Tracker Section Styling */
+
+  
+  /* FAQ Item Styling */
+  .faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* FAQ Question Button Styling */
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #159e21;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-question:hover {
+    background-color: #00940c;
+  }
+  
+  /* FAQ Toggle (+ or - sign) */
+  .faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* FAQ Answer Styling (hidden by default) */
+  .faq-answer {
+    display: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    line-height: 1.5;
+  }
+  
+  /* Open FAQ Answer */
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  
+  .faq-item.active .faq-toggle {
+    transform: rotate(45deg); /* Changes + to - */
+  }
+  
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    background-color: hsl(108, 81%, 64%);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* FAQ container styling */
+.faq-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 15px;
+    color: #000000;
+    background: linear-gradient(145deg, #11b602, #026807);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), -4px -4px 20px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Individual FAQ item */
+  .faq-item {
+    margin: 15px 0;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for FAQ item */
+  .faq-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+  }
+  
+  /* FAQ question styling */
+  .faq-item .faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* FAQ answer styling */
+  .faq-item .faq-answer {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+  }
+  
+  /* Show the answer when active */
+  .faq-item.active .faq-answer {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  /* Animation for answer reveal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+/* FAQ Section Styling */
+/* Contact Section Styles */
+.contact {
+    padding: 60px 20px;
+    background-color: #ececec;
+    animation: fadeInUp 2s ease-out;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #ffb3a1;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2eaa0e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #160301;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doc-ai {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .doc-ai-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .testimonial-box {
+        padding: 15px;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+}
+
+/* Media Query for Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  } 
